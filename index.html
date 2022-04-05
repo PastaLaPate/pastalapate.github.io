@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Economy API</title>
+        <link rel="icon" href="icon.png">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function tankyou() {
+                document.getElementById('tankyou').innerHTML = "Tank you for your download";
+            }
+
+            function activeDownload() {
+                document.getElementById('nav-button-home').className = 'nav-button';
+                document.getElementById('nav-button-download').className = 'active';
+                document.title = "Economy API - DOWNLOAD"
+                return "Succes";
+            }
+
+            function activeHome() {
+                document.getElementById('nav-button-home').className = 'active';
+                document.getElementById('nav-button-download').className = 'nav-button';
+                document.getElementById('nav-button-download-text').className = null;
+                document.title = "Economy API - HOME"
+                return "Succes";
+            }
+        </script>
+    </head>
+    <body>
+
+        <div id="contextMenu" class="context-menu" 
+        style="display:none">
+        <ul>
+            <li><p>Welcome to Economy-API Menu</p></li>
+            <li><button class="context-menu-button"><a href="#download" onclick="activeDownload()">Go to download</a></button></li>
+            <li><a href="#">Element-2</a></li>
+            <li><a href="#">Element-3</a></li>
+            <li><a href="#">Element-4</a></li>
+            <li><a href="#">Element-5</a></li>
+            <li><a href="#">Element-6</a></li>
+            <li><a href="#">Element-7</a></li>
+        </ul>
+    </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li class="active"><button onclick="activeHome()" id="nav-button-home"><a href="#home">Home</a></button></li>
+                <li><button onclick="activeDownload()" id="nav-button-download"><a href="#download" class="nav-button" id="nav-button-download-text">Download</a></button></li>
+            </ul>
+        </nav>
+        <div>
+            <div id="home">
+                <p class="title">Home</p>
+                <div class="description">
+                    <p>Hello I'm PastaLaPate the developer of this plugin . Thank you very much for using it as it will take me a long time to develop.<br> See you soon! </p>
+                </div>
+            </div>
+            <div id="download">
+                <p class="title">Download</p>
+                <div class="download-button">
+                    <button onclick="tankyou()" class="lasted">
+                        <a href="file/Economy_API_0-0-3-BETA.jar" id="lasted" class="lasted-text">Download Latest Release</a>
+                    </button>
+                    <button onclick="tankyou()" class="lasted lasted-beta">
+                        <a href="file/Economy_API_0-0-3-BETA.jar" id="lasted" class="lasted-beta-text">Download Latest Beta</a>
+                    </button>
+                    <button onclick="tankyou()" class="lasted lasted-alpha">
+                        <a href="file/Economy_API_0-0-3-BETA.jar" id="lasted" class="lasted-alpha-text">Download Latest Alpha</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <p id="tankyou" class="tank-you"></p>
+        <script>
+            activeHome();
+
+            document.onclick = hideMenu;
+        document.oncontextmenu = rightClick;
+  
+        function hideMenu() {
+            document.getElementById(
+                "contextMenu").style.display = "none"
+        }
+  
+        function rightClick(e) {
+            e.preventDefault();
+  
+            if (document.getElementById(
+                "contextMenu").style.display == "block")
+                hideMenu();
+            else {
+                var menu = document
+                    .getElementById("contextMenu")
+                      
+                menu.style.display = 'block';
+                menu.style.left = e.pageX + "px";
+                menu.style.top = e.pageY + "px";
+            }
+        }
+        </script>
+    </body>
+</html>
