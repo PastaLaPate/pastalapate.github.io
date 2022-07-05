@@ -1,102 +1,26 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>Economy API</title>
-        <link rel="icon" href="icon.png">
-        <link rel="stylesheet" href="style.css">
-        <script>
-            function tankyou() {
-                document.getElementById('tankyou').innerHTML = "Tank you for your download";
-            }
-
-            function activeDownload() {
-                document.getElementById('nav-button-home').className = 'nav-button';
-                document.getElementById('nav-button-download').className = 'active';
-                document.title = "Economy API - DOWNLOAD"
-                return "Succes";
-            }
-
-            function activeHome() {
-                document.getElementById('nav-button-home').className = 'active';
-                document.getElementById('nav-button-download').className = 'nav-button';
-                document.getElementById('nav-button-download-text').className = null;
-                document.title = "Economy API - HOME"
-                return "Succes";
-            }
-        </script>
-    </head>
-    <body>
-
-        <div id="contextMenu" class="context-menu" 
-        style="display:none">
-        <ul>
-            <li><p>Welcome to Economy-API Menu</p></li>
-            <li><button class="context-menu-button"><a href="#download" onclick="activeDownload()">Go to download</a></button></li>
-            <li><a href="#">Element-2</a></li>
-            <li><a href="#">Element-3</a></li>
-            <li><a href="#">Element-4</a></li>
-            <li><a href="#">Element-5</a></li>
-            <li><a href="#">Element-6</a></li>
-            <li><a href="#">Element-7</a></li>
-        </ul>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li class="right formationT"><a href="#formation">Formation</a></li>
+      </ul>
+    </nav>
+    <div class="image-container">
+      <img src="https://blog.bruce.work/hubfs/Header_Qulles-questions-preparer-entretien-embauche.jpg" width=100% style="margin-top: 68px"></img>
+      <div class="centered"><p>"Nous sommes là,<br> pour vous aider"</p></div>
+      <div class="centered2"><a class="join formation2" href="#formation">Rejoindre</a></div>
     </div>
-
-        <nav class="nav-bar">
-            <ul>
-                <li class="active"><button onclick="activeHome()" id="nav-button-home"><a href="#home">Home</a></button></li>
-                <li><button onclick="activeDownload()" id="nav-button-download"><a href="#download" class="nav-button" id="nav-button-download-text">Download</a></button></li>
-            </ul>
-        </nav>
-        <div>
-            <div id="home">
-                <p class="title">Home</p>
-                <div class="description">
-                    <p>Hello I'm PastaLaPate the developer of this plugin . Thank you very much for using it as it will take me a long time to develop.<br> See you soon! </p>
-                </div>
-            </div>
-            <div id="download">
-                <p class="title">Download</p>
-                <div class="download-button">
-                    <button onclick="tankyou()" class="lasted">
-                        <a href="file/Economy_API_0-0-3-BETA.jar" id="lasted" class="lasted-text">Download Latest Release</a>
-                    </button>
-                    <button onclick="tankyou()" class="lasted lasted-beta">
-                        <a href="file/Economy_API_0-0-3-BETA.jar" id="lasted" class="lasted-beta-text">Download Latest Beta</a>
-                    </button>
-                    <button onclick="tankyou()" class="lasted lasted-alpha">
-                        <a href="file/Economy_API_0-0-3-BETA.jar" id="lasted" class="lasted-alpha-text">Download Latest Alpha</a>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <p id="tankyou" class="tank-you"></p>
-        <script>
-            activeHome();
-
-            document.onclick = hideMenu;
-        document.oncontextmenu = rightClick;
-  
-        function hideMenu() {
-            document.getElementById(
-                "contextMenu").style.display = "none"
-        }
-  
-        function rightClick(e) {
-            e.preventDefault();
-  
-            if (document.getElementById(
-                "contextMenu").style.display == "block")
-                hideMenu();
-            else {
-                var menu = document
-                    .getElementById("contextMenu")
-                      
-                menu.style.display = 'block';
-                menu.style.left = e.pageX + "px";
-                menu.style.top = e.pageY + "px";
-            }
-        }
-        </script>
-    </body>
+  <br><br><br>
+  <div class="about">
+    <img src="https://www.usine-digitale.fr/mediatheque/9/9/4/000910499/datacenter.jpg" width="30%">
+    <p><span class="title">Qui nous sommes ?</span><br><br><br> J'aimant <important>frites</important> amet, consectetur adipiscing elit. Suspendisse a ex vel leo pulvinar egestas. Nam interdum eros non sapien euismod, ac porta nisi elementum. In sed elementum felis. Aliquam iaculis quam eu ligula auctor, ut imperdiet nisl mollis. Nulla semper lacinia volutpat. Nam cursus leo eget laoreet gravida. Suspendisse sit amet massa ac felis tincidunt viverra. Aenean vel tempor sem. Vivamus quis erat ullamcorper, egestas arcu sit amet, iaculis ex. Aenean iaculis, nulla eu pulvinar tincidunt, turpis justo commodo diam, sit amet suscipit augue justo nec erat. Vestibulum facilisis rhoncus tellus quis fermentum.</p>
+  </div>
+  <div class="formation" id="formation">
+    <p><span class="title">Nous rejoindre</span><br><br><br> </p>
+  </div>
+  </body>
 </html>
