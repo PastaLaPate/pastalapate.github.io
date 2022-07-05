@@ -1,156 +1,203 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
-
-* {
-    color: white;
-    text-align: center;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@500&family=Roboto&display=swap');
+ 
 body {
-    background-color: #111;
+  background: rgb(2,0,36);
+  background-image: linear-gradient(to right top, #000000, #1e1e1e, #353535, #4e4e4e, #696969);
+}
+ 
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
     margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
-p {
-    text-align: center;
-}
-
-div , .nav-bar , .title , .lasted{
-  border: white solid 0.5px;
-}
-
-button {
-    border: none;
-}
-
+ 
 a {
-    text-decoration: none;
-    font-family: Courier New;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #000;
-}
-
-li {
-  border-right:1px solid #bbb;
-  float: left;
-}
-
-li:last-child {
-    border-right: none;
-  }
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-.nav-bar {
-    background-color: black;
-}
-
-.title {
-    font-size: 45px;
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: #050505;
-    display: block;
-    margin: 0;
-    padding: 8px;
-}
-
-.description {
-  background-color: #080808;
-  margin: 0;
-  padding: 3px;
-}
-
-.active {
-    background-color: #4CAF50;
-  }
-
-.tank-you {
-    text-align: center;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-.lasted {
-  padding: 16px;
-  padding-left: 25px;
-  padding-right: 25px;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  text-align: center;
-  background-color: #080808;
-}
-
-.lasted:hover {
-  background-color: #4CAF50;
-}
-
-.lasted-beta {
-  padding: 16px;
-  padding-left: 25px;
-  padding-right: 25px;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  text-align: center;
-}
-
-.lasted-beta:hover {
-  background-color: teal;
-}
-
-.lasted-text {
-  text-align: center;
-}
-
-.lasted-alpha:hover {
-  background-color: gray;
-}
-
-.context-menu {
-  position: absolute;
-  /*text-align: center;*/
-  background: lightgray;
-  border: 1px solid white;
-}
-
-.context-menu ul {
-  padding: 0px;
-  margin: 0px;
-  min-width: 150px;
-  list-style: none;
-  overflow:hidden
-}
-
-.context-menu ul li {
-  padding-bottom: 7px;
-  padding-top: 7px;
-  border: 1px solid black;
-  float:none
-}
-
-.context-menu ul li a {
   text-decoration: none;
   color: black;
 }
-
-.context-menu ul li:hover {
-  background: darkgray;
+ 
+p {
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
-
-.nav-button {
-  background-color: #080808;
+ 
+nav {
+  width: 100%;
+  background-color: grey;
+  top: 0px;
+  position: fixed;
+  z-index: 100
 }
-
-.context-menu-button {
-  background: none;
+ 
+ul li {
+  display: inline-block;
+  margin-right: 25px;
+  padding: 10px;
+  font-family: 'Kantumruy Pro', sans-serif;
+}
+ 
+.right {
+  float: right;
+}
+ 
+.formationT  {
+  position: relative;
+  padding: 10px 20px;
+  margin: 5px;
+  background: grey;
+  border-radius: 100px;
+}
+ 
+.formationT::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -3px;
+  border-radius: inherit;
+  background-image: linear-gradient(45deg, purple, orange);
+}
+ 
+.image-container {
+    position: relative;
+}
+ 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-45%, -20%);
+  color: white;
+}
+ 
+.centered p {
+  font-size: 25px;
+  font-family: impact;
+  text-shadow: 5px 3px 1px black;
+}
+ 
+.join {
+  font-size: 20px;
+  font-family: impact;
+  text-shadow: 5px 3px 1px black;
+  color: white;
+}
+ 
+.centered2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, 300%);
+  color: white;
+}
+ 
+.formation2  {
+  position: relative;
+  padding: 5px 10px;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 100px;
+}
+ 
+.formation2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -3px;
+  border-radius: inherit;
+  background-image: linear-gradient(45deg, purple, orange);
+}
+ 
+.about {
+  display: inline-flex;
+  position: relative;
+  background-color: rgb(52,52,56);
+  padding: 10px;
+  margin: 10px;
+  z-index: -2;
+  border-radius: 10px;
+}
+ 
+.about p {
+  float: right;
+  padding: 10px
+}
+ 
+important  {
+  position: relative;
+  padding: 0px 5px;
+  margin: 0px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 100px;
+}
+ 
+important::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: auto;
+  border-radius: inherit;
+  background-image: linear-gradient(60deg, purple, orange);
+}
+ 
+.formation p {
+  display: block;
+  text-align: center;
+}
+ 
+.title {
+  position: relative;
+  padding: 0px 5px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 100px;
+  font-size: 45px;
+}
+ 
+.title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -3px
+    ;
+  border-radius: inherit;
+  background-image: linear-gradient(60deg, purple, orange);
+}
+ 
+.formation {
+  display: inline-flex;
+  position: relative;
+  background-color: rgb(52,52,56);
+  padding: 10px;
+  margin: 10px;
+  z-index: -2;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+ 
+.formation p {
+  float: right;
+  padding: 10px
 }
