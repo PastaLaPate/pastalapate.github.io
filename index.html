@@ -4,69 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/102849c353.js" crossorigin="anonymous"></script>
     <meta name="author" content="PastaLaPate">
-    <meta name="application-name" content="Portofolio-PastaLaPate">
-    <meta name="description" content="My portofolio">
+    <meta name="application-name" content="Portfolio-PastaLaPate">
+    <meta name="description" content="My portfolio">
     <meta name="color-scheme" content="only dark" />
     <meta name="robots" content="all"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PastaLaPate - Portofolio</title>
-    <script>
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-        window.location = document.URL.substr(0,document.URL.lastIndexOf('/')) + "/mobile.html";
-    }
-    </script>
 </head>
 <body>
-
+    <nav>
+        <ul>
+            <li><img src="./img/logo.png" class="logo"></img></li>
+            <li><a target="blank_" href="https://github.com/PastaLaPate">PastaLaPate</a></li>
+        </ul>
+        <div class="subtext"><p>A passioned dev from France 🔵⚪🔴</p></div>
+    </nav>
     <div class="main">
-        <div class="center">
-            <div class="top">
-                <div class="logo">
-                    <img src="img/logo.png" title="logo">
-                </div>
-                <div class="text">
-                    <p>PASTALAPATE</p>
-                </div>
-            </div>
-            <div class="middle">
-                <div class="left c">
-                    <div class="type">
-                        <img src="img/web.png" title="web">
-                    </div>
-                    <p>Web dev</p>
-                    <div class="button">
-                        <a rel="noopener" href="https://github.com/PastaLaPate?tab=repositories&q=&type=public&language=javascript&sort=" target="_blank">View</a>
-                    </div>
-                </div>
-                <div class="center c">
-                    <div class="type">
-                        <img src="img/java.png" title="java">
-                    </div>
-                    <p>Java dev</p>
-                    <div class="button">
-                        <a rel="noopener" href="https://github.com/PastaLaPate?tab=repositories&q=&type=public&language=java&sort=" target="_blank">View</a>
-                    </div>
-                </div>
-                <div class="right c">
-                    <div class="type">
-                        <img src="img/roblox.png" title="roblox">
-                    </div>
-                    <p>Roblox dev</p>
-                    <div class="button">
-                        <a rel="noopener" target="_blank" href="https://web.roblox.com/groups/10917159/ThePastaGames#!/about">View</a>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="github">
-                    <img src="img/github.png" title="github">
-                </div>
-                <div class="youtube">
-                    <img src="img/youtube.png" title="youtube">
-                </div>
-            </div>
+        <div class="card">
+            <i class="fa-solid fa-code fa-beat-fade card-icon"></i>
+            <p class="card-name">Web dev</p>
+            <a target="blank_" href="" class="view-button">View <i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+        <div class="card">
+            <i class="fa-brands fa-java fa-beat-fade card-icon"></i>
+            <p class="card-name">Java dev</p>
+            <a target="blank_" href="https://github.com/PastaLaPate?tab=repositories&q=&type=&language=java&sort=" class="view-button">View <i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-square fa-beat-fade card-icon"></i>
+            <p class="card-name">Roblox dev</p>
+            <a target="blank_" href="https://github.com/PastaLaPate?tab=repositories&q=&type=&language=lua&sort=" class="view-button">View <i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-cat fa-beat-fade card-icon"></i>
+            <p class="card-name">Scratch ?</p>
+            <a target="blank_" href="https://scratch.mit.edu/users/__Pasta__/" class="view-button">View <i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+        <div class="card">
+            <i class="fa-brands fa-python fa-beat-fade card-icon"></i>
+            <p class="card-name">Python</p>
+            <a target="blank_" href="" class="view-button disabled">Soon...<i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
     </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><div class="icon"><a target="blank_" href="https://youtube.com/@TheProgrammer"><i class="fa-brands fa-youtube fa-beat-fade"></i></a></div></li>
+                <li><div class="icon"><a target="blank_" href="https://github.com/PastaLaPate"><i class="fa-brands fa-github fa-beat-fade"></i></a></div></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

@@ -1,101 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap');
 
-body {
-    background: rgb(64, 115, 255);
-    background: linear-gradient(137deg, rgba(64, 115, 255, 1) 0%, rgba(0, 162, 60, 1) 100%);
+:root {
+    --primary-color: #343434;
+    --secondary-color: #3f3f3f;
+    --button-color: #2a68ba;
 }
 
-@font-face {
-    font-family: 'FredokaOne';
-    src: url('font/FredokaOne-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+* {
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0px;
+    background: rgb(64, 115, 255);
+    background:  linear-gradient(137deg, rgba(64, 115, 255, 1) 0%, rgba(0, 162, 60, 1) 100%);
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+nav ul {
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li .logo {
+    width: 7vw;
+}
+
+nav ul li a {
+    font-size: 5vmin;
+}
+
+nav .subtext {
+    margin: 3px;
+    padding: 1vh;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+nav .subtext p {
+    margin: 0px;
 }
 
 .main {
-    position: absolute;
-    left: 15%;
-    background-color: #343434;
-    border-radius: 129px;
-    width: 70%;
-    height: 85%;
-    top: 7.5%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.center {
+.card {
+    margin: 5px auto;
+    gap: 1rem;
+    min-width: 200px;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 500px;
+    display: inline;
+    background-color: var(--primary-color);
+    border-radius: 20px;
     text-align: center;
 }
 
-.top {
-    position: relative;
-    top: 30px;
+.card .card-icon {
+    font-size: 5vw;
+    margin-top: 10px;
 }
 
-.logo img {
-    position: relative;
-    width: 10vmin;
+.card .card-name {
+    font-size: 3.5vw;
 }
 
-.text p {
-    margin-top: 0px;
-    position: relative;
-    color: white;
-    font-size: 10vmin;
-    font-family: 'Fredoka One';
+.card .view-button {
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    border-radius: 10px;
 }
 
-.middle .c {
-    position: relative;
-    display: inline-block;
-    background-color: #656565;
-    padding: 30px 10px 30px 10px;
-    margin: 10px;
-    width: 17%;
-    border-radius: 30px;
+.card .disabled {
+    background-color: var(--secondary-color);
+    color: grey;
 }
 
-.middle div .type img {
-    width: 10vmin;
+.card .disabled i {
+    color: grey;
 }
 
-.middle div p {
-    margin: 0px;
-    font-family: 'Cascadia Mono';
-    color: white;
-    font-size: 3vmin;
-}
-
-.middle div a {
-    margin: 0px;
-    font-family: 'Cascadia Mono';
-    color: white;
-    font-size: 2vmin;
-}
-
-.middle div .button {
-    background: rgb(64, 115, 255);
-    background: linear-gradient(137deg, rgba(64, 115, 255, 1) 0%, rgba(0, 162, 60, 1) 100%);
-    display: block;
-    border-radius: 100px;
-    width: 6vmin;
-    margin: auto;
-    margin-top: 1vmin;
-    padding: 3%;
-}
-
-.bottom div {
-    display: inline-block;
-}
-
-.bottom div img {
-    width: 10vmin;
-}
-
-.bottom .youtube {
-    position: relative;
-    top: 15px;
-}
-
-.bottom .youtube img {
-    width: 13vmin;
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    margin-top: 20px;
 }
