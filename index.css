@@ -61,15 +61,16 @@ nav .subtext p {
 .main {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 0.8fr));
+    gap: 1rem;
 }
 
 .card {
     margin: 5px auto;
-    gap: 1rem;
-    min-width: 200px;
+    padding: 2rem;
+    min-width: 100px;
     max-width: 400px;
-    min-height: 300px;
+    min-height: 450px;
     max-height: 500px;
     display: inline;
     background-color: var(--primary-color);
